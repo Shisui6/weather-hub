@@ -1,0 +1,16 @@
+nav {
+  background-color: #ec4c8b;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 15px;
+  align-items: center;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+nav .continent {
+  font-weight: 300;
+}
