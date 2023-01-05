@@ -1,0 +1,40 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  background-color: #fe5395;
+  height: 335px;
+  color: #fff;
+  align-items: center;
+}
+
+.Home img {
+  height: 200px;
+  width: 200px;
+  margin-right: 40px;
+}
+
+.Home-text h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.Home-text p {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.divider {
+  height: 25px;
+  background-color: #b13968;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+  padding: 3px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 150px;
+}

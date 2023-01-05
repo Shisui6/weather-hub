@@ -10,12 +10,19 @@ import App from './routes/App';
 import ErrorPage from './routes/error-page';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import Home from './features/Home/Home';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+    ],
   },
 ]);
 
