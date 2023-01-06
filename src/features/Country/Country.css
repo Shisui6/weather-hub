@@ -1,0 +1,47 @@
+.Country {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.Country h2 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.Country h3 {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.Country img {
+  margin-right: 10px;
+  width: 110px;
+  height: 70px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #9f345d;
+}
+
+@media only screen and (max-width: 768px) {
+  .Country img {
+    margin-right: 10px;
+    width: 80px;
+    height: 70px;
+  }
+}
