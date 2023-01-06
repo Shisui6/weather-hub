@@ -1,26 +1,25 @@
-.Home {
+.Details {
   display: flex;
   justify-content: center;
   background-color: #fe5395;
   height: 335px;
   color: #fff;
   align-items: center;
-  width: 100%;
 }
 
-.Home img {
+.Details img {
   height: 200px;
   width: 200px;
   margin-right: 40px;
 }
 
-.Home-text h2 {
+.Details-text h2 {
   font-size: 30px;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
-.Home-text p {
+.Details-text p {
   font-size: 20px;
   margin-top: 0;
 }
@@ -34,15 +33,10 @@
   padding: 3px;
 }
 
-.countries-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 150px 150px;
-}
-
-@media only screen and (max-width: 768px) {
-  .countries-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px 150px 150px;
-  }
+.details-info {
+  background-color: #ea4a89;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }

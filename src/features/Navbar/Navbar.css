@@ -14,3 +14,10 @@ nav h2 {
 nav .continent {
   font-weight: 300;
 }
+
+nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
