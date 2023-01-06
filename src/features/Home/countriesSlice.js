@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const initialState = {
   countries: [],
   selectedCountry: '',
+  filter: 'All',
   status: 'idle',
 };
 
@@ -42,6 +43,10 @@ export const countriesSlice = createSlice({
       const state1 = state;
       state1.selectedCountry = action.payload;
     },
+    setFilter(state, action) {
+      const state1 = state;
+      state1.filter = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -76,9 +81,19 @@ export const countriesSlice = createSlice({
   },
 });
 
-export const { setSelectedCountry } = countriesSlice.actions;
+export const { setSelectedCountry, setFilter } = countriesSlice.actions;
 
 export const selectCountries = (state) => state.countries.countries;
+export const selectFilter = (state) => state.countries.filter;
 export const selectSelectedCountry = (state) => state.countries.selectedCountry;
+export const selectFilteredCountry = (state) => {
+  const countries = selectCountries(state);
+  const filter = selectFilter(state);
+  if (filter !== 'All') {
+    return countries.filter((country) => country.country.includes(filter));
+  }
+
+  return countries;
+};
 
 export default countriesSlice.reducer;

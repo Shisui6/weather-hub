@@ -162,6 +162,7 @@ If you like this project please leave a star🤩
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - [Microverse](https://www.microverse.org/)
+- Original design idea by [Nelson Sakwa in Behance](https://www.behance.net/sakwadesignstudio).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

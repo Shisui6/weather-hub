@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { UilArrowCircleRight } from '@iconscout/react-unicons';
 import { setSelectedCountry } from '../Home/countriesSlice';
 import './Country.css';
 
@@ -29,9 +30,10 @@ const Country = ({ country }) => {
 
   return (
     <div className="Country" style={background()}>
+      <Link to={`countries/${country.country}`} className="link" onClick={handleClick}><UilArrowCircleRight /></Link>
       <img src={country.countryInfo.flag} alt="nigeria" />
       <div>
-        <Link to={`countries/${country.country}`} className="link" onClick={handleClick}>{country.country}</Link>
+        <h2>{country.country}</h2>
         <h3>
           Population:
           &nbsp;

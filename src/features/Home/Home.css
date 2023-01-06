@@ -37,7 +37,16 @@
 .countries-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 150px 150px;
+  grid-template-rows: 135px 135px;
+}
+
+select {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #e26796;
 }
 
 @media only screen and (max-width: 768px) {
