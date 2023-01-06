@@ -5,7 +5,7 @@
 <details>
   <summary>📗 Table of Contents</summary>
   <ul>
-    <li><a href="#-meal-app-">📖 Air Pollution Monitor</a></li>
+    <li><a href="#-meal-app-">📖 Weather Hub</a></li>
     <li><a href="#-built-with-">🛠 Built With</a></li>
     <li><a href="#-live-demo-">🚀 Live Demo </a></li>
     <li><a href="#-getting-started-">💻 Getting Started</a></li>
@@ -22,9 +22,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Air Pollution Monitor <a name="about-project"></a>
+# 📖 Weather Hub <a name="about-project"></a>
 
-**Air Pollution Monitor** is a react and redux application that helps provide commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+**Weather Hub** is a react and redux application that provides up to date weather info on different countries in africa
+
+![image](https://user-images.githubusercontent.com/37116322/210978681-75785eb9-78c6-45f5-803e-92e0d9d52743.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,7 +44,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- ...
+- Displays a home page with different countries in africa
+- Allows users to click on each country to view detailed weather information
+- Responsive design which adapts to most screen sizes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -50,7 +54,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](#)
+- [Live Demo Link](https://shisui-weather-hub.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,7 +80,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/Shisui6/air-pollution-monitor.git
+  git clone https://github.com/Shisui6/weather-hub.git
 ```
 
 ### Install
@@ -84,7 +88,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd air-pollution-monitor
+  cd weather-hub
   npm install
 ```
 

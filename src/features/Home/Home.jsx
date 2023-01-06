@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import africaImg from '../../images/africa.png';
 import Country from '../Country/Country';
 import './Home.css';
-import { fetchCountryData, selectCountries } from './countriesSlice';
+import { fetchCountries, selectCountries } from './countriesSlice';
 
 const Home = () => {
   const dispatch = useDispatch();
   const countries = useSelector(selectCountries);
 
   useEffect(() => {
-    dispatch(fetchCountryData());
+    dispatch(fetchCountries());
   }, [dispatch]);
 
   return (

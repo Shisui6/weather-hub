@@ -11,6 +11,7 @@ import ErrorPage from './routes/error-page';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Home from './features/Home/Home';
+import Details from './features/Details/Details';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: 'countries/:name',
+        element: <Details />,
       },
     ],
   },
