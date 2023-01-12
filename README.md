@@ -24,9 +24,9 @@
 
 # 📖 Weather Hub <a name="about-project"></a>
 
-**Weather Hub** is a react and redux application that provides up to date weather info on different countries in africa
+**Weather Hub** is a react and redux application that provides current weather info on different countries in Africa
 
-![image](https://user-images.githubusercontent.com/37116322/210978681-75785eb9-78c6-45f5-803e-92e0d9d52743.png)
+![image](https://user-images.githubusercontent.com/37116322/212041995-421abf4c-8d11-4d8f-93f6-ede8a3ba91ec.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,8 +44,10 @@
 
 ### Key Features <a name="key-features"></a>
 
+- Fetches weather information from the [OpenWeatherMap](https://openweathermap.org/api) API
 - Displays a home page with different countries in africa
 - Allows users to click on each country to view detailed weather information
+- Search bar to filter countries by name
 - Responsive design which adapts to most screen sizes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,7 +164,6 @@ If you like this project please leave a star🤩
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - [Microverse](https://www.microverse.org/)
-- Original design idea by [Nelson Sakwa in Behance](https://www.behance.net/sakwadesignstudio).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

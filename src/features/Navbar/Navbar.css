@@ -1,10 +1,9 @@
 nav {
-  background-color: #ec4c8b;
   display: flex;
   justify-content: space-between;
-  color: #fff;
-  padding: 15px;
+  padding: 12px 25px;
   align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(245, 122, 42, 0.2);
 }
 
 nav h2 {
@@ -18,6 +17,5 @@ nav .continent {
 nav button {
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
 }

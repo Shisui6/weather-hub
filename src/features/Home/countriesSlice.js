@@ -3,8 +3,9 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const initialState = {
   countries: [],
   selectedCountry: '',
-  filter: 'All',
-  status: 'idle',
+  countryWeather: '',
+  filter: '',
+  isLoading: true,
 };
 
 export const fetchCountries = createAsyncThunk(
@@ -12,26 +13,29 @@ export const fetchCountries = createAsyncThunk(
   async () => {
     const response = await fetch('https://disease.sh/v3/covid-19/countries');
     let json = await response.json();
-    json = json.filter((item) => item.country === 'Nigeria' || item.country === 'Kenya' || item.country === 'Ghana' || item.country === 'South Africa' || item.country === 'Morocco' || item.country === 'Egypt' || item.country === 'Tanzania' || item.country === 'Ethiopia');
-    let i = 1;
-    json.forEach((element) => {
-      const element1 = element;
-      element1.id = i;
-      i += 1;
-    });
-
-    return json;
+    json = json.filter((item) => item.continent === 'Africa');
+    return json.map((obj) => ({
+      // eslint-disable-next-line no-underscore-dangle
+      id: obj.countryInfo._id,
+      name: obj.country,
+      population: obj.population,
+      flag: obj.countryInfo.flag,
+      lat: obj.countryInfo.lat,
+      long: obj.countryInfo.long,
+    }));
   },
 );
 
 export const fetchCountryWeather = createAsyncThunk(
   'countries/fetchCountryWeather',
   async (country) => {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${country.countryInfo.lat}&lon=${country.countryInfo.long}&appid=${process.env.REACT_APP_API_KEY}`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${country.lat}&lon=${country.long}&appid=${process.env.REACT_APP_API_KEY}`);
     const json = await response.json();
-    json.name = country.country;
-    json.population = country.population;
-    return json;
+    return {
+      ...country,
+      main: json.main,
+      weather: json.weather,
+    };
   },
 );
 
@@ -39,58 +43,54 @@ export const countriesSlice = createSlice({
   name: 'countries',
   initialState,
   reducers: {
+    setFilter(state, action) {
+      const state1 = state;
+      state1.filter = action.payload;
+    },
     setSelectedCountry(state, action) {
       const state1 = state;
       state1.selectedCountry = action.payload;
     },
-    setFilter(state, action) {
+    setLoading(state) {
       const state1 = state;
-      state1.filter = action.payload;
+      state1.isLoading = true;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCountries.pending, (state) => {
         const state1 = state;
-        state1.status = 'loading';
+        state1.isLoading = true;
       })
       .addCase(fetchCountries.fulfilled, (state, action) => {
         const state1 = state;
-        state1.status = 'idle';
+        state1.isLoading = false;
         state1.countries = action.payload;
       })
       .addCase(fetchCountryWeather.pending, (state) => {
         const state1 = state;
-        state1.status = 'loading';
+        state1.isLoading = true;
       })
       .addCase(fetchCountryWeather.fulfilled, (state, action) => {
         const state1 = state;
-        state1.status = 'idle';
-        state1.countries = state.countries.map((country) => {
-          if (country.country === action.payload.name) {
-            const country1 = country;
-            country1.weather = action.payload.weather;
-            country1.main = action.payload.main;
-            return country1;
-          }
-
-          return country;
-        });
-        state1.selectedCountry = action.payload;
+        state1.isLoading = false;
+        state1.countryWeather = action.payload;
       });
   },
 });
 
-export const { setSelectedCountry, setFilter } = countriesSlice.actions;
+export const { setFilter, setSelectedCountry, setLoading } = countriesSlice.actions;
 
 export const selectCountries = (state) => state.countries.countries;
+export const selectIsLoading = (state) => state.countries.isLoading;
 export const selectFilter = (state) => state.countries.filter;
 export const selectSelectedCountry = (state) => state.countries.selectedCountry;
+export const selectCountryWeather = (state) => state.countries.countryWeather;
 export const selectFilteredCountry = (state) => {
   const countries = selectCountries(state);
   const filter = selectFilter(state);
-  if (filter !== 'All') {
-    return countries.filter((country) => country.country.includes(filter));
+  if (filter !== '') {
+    return countries.filter((country) => country.name.toLowerCase().includes(filter.toLowerCase()));
   }
 
   return countries;

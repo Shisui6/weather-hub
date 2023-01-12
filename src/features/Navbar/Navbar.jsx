@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <h2>{location.pathname === '/' ? '2022' : <button type="button" aria-label="Save" onClick={() => navigate(-1)}><UilBackspace size="30" /></button> }</h2>
+      <h2>{location.pathname === '/' ? 'Home' : <button type="button" aria-label="Save" onClick={() => navigate(-1)}><UilBackspace size="30" /></button> }</h2>
       <h2 className="continent">{location.pathname === '/' ? 'Continent' : 'Country'}</h2>
       <UilSetting />
     </nav>
