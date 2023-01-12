@@ -10,24 +10,24 @@
   align-items: center;
   padding-top: 30px;
   position: relative;
-  right: 50px;
+  right: 40px;
 }
 
 .Home-intro img {
-  height: 350px;
+  height: 310px;
   width: 25%;
   min-width: 200px;
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .Home-text h2 {
-  font-size: 35px;
+  font-size: 32px;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
 .Home-text p {
-  font-size: 20px;
+  font-size: 17.5px;
   margin-top: 0;
 }
 
@@ -48,13 +48,13 @@
 
 .search__input {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 14px;
   background-color: #f4f2f2;
   border: none;
   color: #646464;
-  padding: 0.7rem 1rem;
+  padding: 0.65rem 1rem;
   border-radius: 30px;
-  width: 17em;
+  width: 17.5em;
   transition: all ease-in-out 0.5s;
   margin-right: -2rem;
 }

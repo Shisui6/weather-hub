@@ -3,11 +3,11 @@
 }
 
 .card {
-  padding: 2rem 1.5rem;
+  padding: 1.7rem 1.5rem;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(137, 137, 137, 0.2);
-  height: 220px;
+  height: 195px;
 }
 
 .card-info {
@@ -19,14 +19,14 @@
 }
 
 .card-avatar {
-  --size: 60px;
+  --size: 53px;
 
   background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
   transition: transform 0.2s ease;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .card-avatar img {
@@ -46,15 +46,15 @@
 
 .card-title {
   color: #f57a2a;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 600;
   line-height: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .card-subtitle {
   color: #859ba8;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .card:hover {

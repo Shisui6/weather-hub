@@ -1,7 +1,7 @@
 .Details {
   text-align: center;
   height: 100vh;
-  padding-top: 65px;
+  padding-top: 60px;
   background-size: 100% 100%;
   color: #fff;
   opacity: 0;
@@ -15,11 +15,11 @@
 }
 
 .Details-text {
-  margin-bottom: 150px;
+  margin-bottom: 135px;
 }
 
 .Details-text h2 {
-  font-size: 65px;
+  font-size: 58px;
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 2px;
@@ -27,13 +27,13 @@
 }
 
 .Details-text p {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 0;
 }
 
 .Details-text img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -41,7 +41,11 @@
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 0 150px;
+  padding: 0 135px;
+}
+
+.details-info h2 {
+  font-size: 21px;
 }
 
 .loader {
@@ -159,8 +163,9 @@
 
 .Details button {
   display: flex;
+  font-size: 12px;
   height: 3em;
-  width: 100px;
+  width: 90px;
   align-items: center;
   justify-content: center;
   background-color: #eeeeee4b;
